@@ -36,19 +36,19 @@ export const signin = async (req, res, next) => {
 
     try {
         const validUser = await User.findOne({ email });
-        // if(!validUser){
-        //     next(errorHandler(404, 'User not found'));
-        // }
+        if(!validUser){
+            next(errorHandler(404, 'User not found'));
+        }
 
         const validPassword = bcryptjs.compareSync(password,validUser.password);
-        // if(!validPassword){
-        //     return next(errorHandler(400, 'Invalid Password'));
-        // }
+        if(!validPassword){
+            return next(errorHandler(400, 'Invalid password'));
+        }
 
         //Hacker should not know exsctly whether email is wrong or password. Hence in both case print invalid credentials
-        if(!validUser || !validPassword){
-            return next(errorHandler(400, 'Invalid Credentials'));
-        }
+        // if(!validUser || !validPassword){
+        //     return next(errorHandler(400, 'Invalid Credentials'));
+        // }
 
         const token = jwt.sign({id: validUser._id}, process.env.JWT_SECRET);
 
