@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch('/api/post/getPosts');
+      const res = await fetch('/api/post/getposts'); //github me getPosts likha hai, lekin jab maine getPosts likha toh error aa rha tha
       const data = await res.json();
       setPosts(data.posts);
     };
