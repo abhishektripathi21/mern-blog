@@ -6,7 +6,7 @@ export default function About() {
           <h1 className='text-3xl font font-semibold text-center my-7'>
             About Techie Blogs
           </h1>
-          <div className='text-md text-gray-500 flex flex-col gap-6'>
+          <div className='text-md text-gray-500 flex flex-col gap-6 '>
             <p>
               Welcome to Techie Blogs! This blogs was created by Abhishek Tripathi
               as a personal project to share his thoughts and ideas with the
