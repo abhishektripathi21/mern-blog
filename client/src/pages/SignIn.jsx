@@ -47,7 +47,7 @@ export default function SignIn() {
           <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>Techie</span>
           Blogs
           </Link>
-          <p className="text-sm mt-5">This is a demo project. Enter your email and password</p>
+          <p className="text-sm mt-5">Enter your email and password</p>
         </div>
         {/* right */}
         <div className="flex-1">
